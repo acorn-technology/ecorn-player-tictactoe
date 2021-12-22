@@ -1,7 +1,7 @@
 import random
 from typing import List
 
-from models import Action, ActionRequest, Mark
+from models import Action, ActionRequest, Mark, PlayerRegistration
 
 # Player controll logic
 def get_actions(action_request: ActionRequest) -> List[Action]:
@@ -17,8 +17,9 @@ def get_actions(action_request: ActionRequest) -> List[Action]:
         return []
   
 
-def get_player_info():
-  return {
+def get_player_info() -> PlayerRegistration:
+  reg = {
     "id": "cc9ddc91-2e0d-4565-af30-a39748f2344b",
     "name": "Swamp prawns"
   }
+  return PlayerRegistration(**reg)

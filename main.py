@@ -12,7 +12,7 @@ app = fastapi.FastAPI()
 
 player: ModuleType = None
 
-player_path = os.path.join(os.path.dirname(__file__), 'player.py')
+player_path = os.path.join(os.path.dirname(__file__), 'player/player.py')
 
 
 def load_player():

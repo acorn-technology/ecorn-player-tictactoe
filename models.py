@@ -1,6 +1,10 @@
 from typing import List
-from pydantic import BaseModel
+from pydantic import BaseModel, UUID4
 from enum import IntEnum, auto, unique
+
+class PlayerRegistration(BaseModel):
+    id: UUID4
+    name: str
 
 @unique
 class Mark(IntEnum):
